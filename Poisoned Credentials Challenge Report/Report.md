@@ -4,7 +4,7 @@ This document provides a step-by-step analysis of the "Poisoned Credentials" Blu
 
 ---
 
-## 📖 Scenario Overview
+##  Scenario Overview
 
 The network traffic capture (`challenge.pcap`) reveals a classic **Man-in-the-Middle (MitM)** attack.  The attacker exploits insecure, legacy name resolution protocols—specifically **Link-Local Multicast Name Resolution (LLMNR)** and **NetBIOS Name Service (NBT-NS)**—to intercept credentials.
 
@@ -12,14 +12,14 @@ This attack is highly effective in Windows environments where these protocols ar
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 * **Wireshark:** The primary tool for deep packet inspection and analysis of the network traffic capture.
 
 
 ---
 
-## 🔬 Step-by-Step Analysis
+##  Step-by-Step Analysis
 
 The analysis was performed by loading the `challenge.pcap` file into Wireshark and following the attacker's trail from the initial query to the final compromise.
 
@@ -34,7 +34,7 @@ The filter immediately reveals a multicast query from `192.168.232.162` asking "
 ![LLMNR Query](./Screenshots/1.png)
 **Figure 1:** The victim machine `192.168.232.162` broadcasting for `FILESHAARE`.
 
-### 2. The Attack: LLMNR Poisoning ☠️
+### 2. The Attack: LLMNR Poisoning 
 
 The attacker's machine at `192.168.232.215` is running a tool like **Responder**, which is designed to listen for these specific LLMNR and NBT-NS queries. It immediately sends a unicast response directly to the victim, falsely claiming, "I am `FILESHAARE`, and my IP is `192.168.232.215`."
 
@@ -43,7 +43,7 @@ By responding first, the attacker wins the race against any potential legitimate
 ![LLMNR Response](./Screenshots/2.png)
 **Figure 2:** The attacker `192.168.232.215` falsely claiming to be the requested host.
 
-### 3. The Prize: Capturing the NTLMv2 Hash 🔑
+### 3. The Prize: Capturing the NTLMv2 Hash 
 
 Trusting the malicious response, the victim's machine proceeds to authenticate with the attacker using the **Server Message Block (SMB)** protocol. The Windows authentication process uses **NTLMv2**, a challenge-response protocol. The victim sends the username and a hashed response to a challenge sent by the attacker's machine. This hash is not the user's password, but it can be captured and cracked offline using tools like **Hashcat** or used in "Pass-the-Hash" attacks.
 
@@ -55,7 +55,7 @@ By inspecting the SMB2 "Session Setup Request," we can clearly see the username 
 ![SMB Handshake](./Screenshots/3.png)
 **Figure 3:** The user `janesmith`'s NTLMv2 hash being sent to the attacker.
 
-### 4. The Goal: Lateral Movement ➡️
+### 4. The Goal: Lateral Movement 
 
 Capturing the hash is just the first step. The attacker's ultimate goal is to use it to move laterally across the network. The traffic shows the attacker (`192.168.232.215`) immediately leveraging the captured credentials to successfully authenticate to another host: **`AccountingPC`** (`192.168.232.176`).
 
@@ -70,7 +70,7 @@ The successful "Tree Connect Request" and "Tree Connect Response" confirm that t
 
 ---
 
-## 📊 Summary of Findings
+##  Summary of Findings
 
 * **Attack Type:** LLMNR Poisoning & Credential Capture (MitM)
 * **Attacker IP:** `192.168.232.215`
@@ -82,7 +82,7 @@ The successful "Tree Connect Request" and "Tree Connect Response" confirm that t
 
 ---
 
-## 🛡️ Mitigation and Recommendations
+##  Mitigation and Recommendations
 
 This attack is highly effective but also highly preventable. The following hardening steps are recommended:
 

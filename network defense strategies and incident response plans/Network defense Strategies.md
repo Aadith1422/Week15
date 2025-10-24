@@ -1,4 +1,4 @@
-# Network Defense Strategy 🛡️
+# Network Defense Strategy 
 
 This document outlines a proactive, multi-layered cybersecurity strategy based on the principle of **Defense-in-Depth**. This approach assumes that no single security control is infallible and therefore implements multiple layers of defense. If one layer fails, another is in place to detect or stop an attack.
 

@@ -64,4 +64,4 @@ A live test was initiated by sending a continuous `ping` from a designated testi
 
 ## Conclusion
 
-This lab successfully demonstrated the core functionality of Snort as a passive network monitoring tool. It was correctly configured to detect and report specific network activity, fulfilling its role as an effective Intrusion Detection System and highlighting its value for gaining network visibility in a security context. ✅
+This lab successfully demonstrated the core functionality of Snort as a passive network monitoring tool. It was correctly configured to detect and report specific network activity, fulfilling its role as an effective Intrusion Detection System and highlighting its value for gaining network visibility in a security context. 

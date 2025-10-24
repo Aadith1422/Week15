@@ -50,13 +50,13 @@ sudo iptables -I INPUT -p icmp -j NFQUEUE --queue-num 0
 
 Snort was launched in **inline mode**, configured to listen to the **Netfilter queue (nfq)** where **iptables** was sending the traffic.
 
-### 🔧 Command Used
+###  Command Used
 
 ```bash
 sudo snort -c /etc/snort/snort.conf -Q --daq nfq -A console
 ```
 
-### 🧪 Verification Test
+###  Verification Test
 A final **ping test** was initiated. The results provide definitive proof of a **successful IPS deployment**:
 
 - **Traffic was Blocked:**  
@@ -75,12 +75,12 @@ This lab successfully demonstrated the **configuration and operation of Snort** 
 
 By modifying the rule action to `drop` and placing the sensor inline with `iptables`, Snort was effectively transformed from a **passive observer** into an **active network defense**.
 
-✅ **Result:**  
+ **Result:**  
 Snort not only provides **visibility into malicious traffic**, but can also **enforce security policies** by actively **preventing unwanted communication**.
 
 ---
 
-### 📘 Summary
+###  Summary
 
 | Component | Description |
 |------------|--------------|

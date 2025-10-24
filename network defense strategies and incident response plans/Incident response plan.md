@@ -6,7 +6,7 @@ The plan is divided into four distinct phases, forming a continuous cycle of imp
 
 ---
 
-## Phase 1: Preparation 🛠️
+## Phase 1: Preparation 
 
 This proactive phase involves establishing the necessary resources, processes, and capabilities *before* an incident occurs. Proper preparation is the foundation of an effective response.
 
@@ -17,7 +17,7 @@ This proactive phase involves establishing the necessary resources, processes, a
 
 ---
 
-## Phase 2: Detection & Analysis (Identification) 🔍
+## Phase 2: Detection & Analysis (Identification) 
 
 This phase begins when a potential security event is suspected. The primary goals are to confirm if it is a real incident and to understand its scope.
 
@@ -28,7 +28,7 @@ This phase begins when a potential security event is suspected. The primary goal
 
 ---
 
-## Phase 3: Containment, Eradication, & Recovery 🛡️
+## Phase 3: Containment, Eradication, & Recovery 
 
 This is the active response phase focused on damage control and returning to normal business operations. It consists of three sequential steps.
 
@@ -52,7 +52,7 @@ This step involves safely returning affected systems to production. Actions incl
 
 ---
 
-## Phase 4: Post-Incident Activity (Lessons Learned) 📝
+## Phase 4: Post-Incident Activity (Lessons Learned) 
 
 This final phase focuses on learning from the incident to improve future defenses and response efforts.
 
