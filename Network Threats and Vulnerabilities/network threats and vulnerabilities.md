@@ -5,7 +5,7 @@ This document provides a detailed overview of common network security concepts. 
 
 ---
 
-## Part 1: Common Network Threats 🦠
+## Part 1: Common Network Threats 
 
 A **network threat** refers to a malicious act or actor with the potential to damage or disrupt a computer network or system. Threats are the "what" or "who" that could cause harm.
 
@@ -27,7 +27,7 @@ These attacks manipulate human psychology rather than technical vulnerabilities 
     * **Whaling**: Spear phishing that specifically targets high-profile employees like CEOs or CFOs.
 * **Baiting**: This attack uses a false promise to pique a victim's curiosity, often involving physical media like a malware-infected USB drive labeled "Confidential" left in a public place.
 
-### 3. Denial-of-Service (DoS) & Distributed Denial-of-Service (DDoS) Attacks 🚦
+### 3. Denial-of-Service (DoS) & Distributed Denial-of-Service (DDoS) Attacks 
 The goal is to make a network resource (like a website) unavailable to its intended users by overwhelming it with traffic.
 
 * **DoS Attack**: A single attacker floods a target server with traffic or sends it information that triggers a crash.
@@ -44,7 +44,7 @@ These attacks involve inserting malicious code into a program or system.
 
 ---
 
-## Part 2: Common Network Vulnerabilities & Misconfigurations 🔓
+## Part 2: Common Network Vulnerabilities & Misconfigurations 
 
 A **vulnerability** is a weakness or flaw in a system that a threat can exploit. **Misconfigurations** are a type of vulnerability caused by improper security settings.
 
@@ -78,7 +78,7 @@ Without comprehensive logs of network events (e.g., login attempts, firewall act
 
 ---
 
-## Part 3: Mitigation Strategies and Best Practices 🛡️
+## Part 3: Mitigation Strategies and Best Practices 
 
 **Mitigation** involves implementing proactive measures and controls to prevent attacks or minimize their impact. The core principle is **Defense-in-Depth**: creating multiple layers of security.
 
@@ -92,7 +92,7 @@ Without comprehensive logs of network events (e.g., login attempts, firewall act
 * **Network Segmentation**: Divide your network into smaller, isolated zones (e.g., Guest Wi-Fi, Corporate, Production Servers) to contain breaches.
 * **Intrusion Detection/Prevention Systems (IDS/IPS)**: An **IDS** monitors and alerts on suspicious traffic. An **IPS** can actively block malicious traffic before it reaches its target.
 
-### 3. Access Control and Data Protection 🔐
+### 3. Access Control and Data Protection 
 * **Strong Authentication**: Enforce strong password policies and implement **Multi-Factor Authentication (MFA)** wherever possible.
 * **Encryption**: Encrypt all sensitive data, both **in-transit** (using `HTTPS`, `VPNs`) and **at-rest** (using disk encryption like `BitLocker` or database encryption).
 
@@ -102,7 +102,7 @@ Without comprehensive logs of network events (e.g., login attempts, firewall act
 
 ---
 
-## Part 4: Common Security Tools and Technologies 👨‍💻
+## Part 4: Common Security Tools and Technologies 
 
 These are the practical tools that security professionals use to implement mitigation strategies.
 
